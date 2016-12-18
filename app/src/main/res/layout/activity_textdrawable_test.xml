@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.imooc.studyapplication.view.TextDrawable
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="设置"
+        android:textSize="20sp"
+        app:bottomDrawable="@mipmap/ic_launcher"
+        app:bottomDrawableHeight="30dp"
+        app:bottomDrawableWidth="30dp"
+        app:leftDrawable="@mipmap/ic_launcher"
+        app:leftDrawableHeight="30dp"
+        app:leftDrawableWidth="30dp"
+        app:rightDrawable="@mipmap/ic_launcher"
+        app:rightDrawableHeight="30dp"
+        app:rightDrawableWidth="30dp"
+        app:topDrawable="@mipmap/ic_launcher"
+        app:topDrawableHeight="30dp"
+        app:topDrawableWidth="30dp"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000"
+        />
+</LinearLayout>
