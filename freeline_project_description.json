@@ -13,10 +13,10 @@
     "build_directory": "C:\\workspace\\StudyApplication\\app\\build",
     "build_script": "gradlew.bat :app:assembleDebug",
     "build_script_work_directory": "",
-    "build_tools_directory": "C:\\SDK\\build-tools\\25.0.1",
-    "build_tools_version": "25.0.1",
-    "compile_sdk_directory": "C:\\SDK\\platforms\\android-25",
-    "compile_sdk_version": "android-25",
+    "build_tools_directory": "C:\\SDK\\build-tools\\24.0.2",
+    "build_tools_version": "24.0.2",
+    "compile_sdk_directory": "C:\\SDK\\platforms\\android-24",
+    "compile_sdk_version": "android-24",
     "databinding": [
         
     ],
