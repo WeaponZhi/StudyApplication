@@ -40,4 +40,42 @@
         android:id="@+id/btn5"
         android:text="ViewPager的各种集成控件"
         android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/start_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start service"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/stop_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="stop service"
+        android:textAllCaps="false"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/bind_service"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="bind Service"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/unbind_service"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="unbind Service"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
 </LinearLayout>
