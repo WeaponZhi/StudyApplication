@@ -20,6 +20,7 @@
         <activity android:name=".TabLayoutActivity"/>
         <activity android:name=".ProgressBarTestActivity"/>
         <activity android:name=".ViewPagerActivity"/>
+        <activity android:name=".ParcelableTestActivity"/>
 
         <service android:name=".service.TestService"/>
     </application>

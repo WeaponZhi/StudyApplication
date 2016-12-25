@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.imooc.studyapplication.bean.ParcelableTestBean;
 import com.imooc.studyapplication.service.TestService;
 
 import butterknife.Bind;
@@ -67,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
     Button btn8;
     @Bind(R.id.unbind_service)
     Button btn9;
+    @Bind(R.id.btn_parcelable)
+    Button btn10;
     private TestService.MyBinder mMyBinder;
     //关联activity和service
     private ServiceConnection mConnection = new ServiceConnection() {
@@ -89,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4,R.id.btn5,R.id.start_service,R.id.stop_service,R.id.bind_service,R.id.unbind_service})
+    @OnClick({R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4, R.id.btn5, R.id.start_service, R.id.stop_service, R.id.bind_service, R.id.unbind_service, R.id.btn_parcelable})
     public void onClick(View view) {
         Intent intent = new Intent();
         switch (view.getId()) {
@@ -133,6 +136,19 @@ public class MainActivity extends AppCompatActivity {
             case R.id.unbind_service:
                 //解绑服务
                 unbindService(mConnection);
+                break;
+            case R.id.btn_parcelable:
+                Intent intentParcelable = new Intent(this, ParcelableTestActivity.class);
+                Bundle bundle = new Bundle();
+                ParcelableTestBean parcelableTestBean = new ParcelableTestBean();
+                parcelableTestBean.setTestType("This is TestType");
+                parcelableTestBean.setTestNum("This is TestNum");
+                parcelableTestBean.setTestId("This is TestId");
+                parcelableTestBean.setTestName("This is TestName");
+                parcelableTestBean.setTestOrderNum("This is TestOrderNum");
+                bundle.putParcelable("parcelable",parcelableTestBean);
+                intentParcelable.putExtras(bundle);
+                startActivity(intentParcelable);
                 break;
         }
     }
