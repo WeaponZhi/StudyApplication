@@ -29,7 +29,6 @@ public class ParcelableTestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parcelable_test);
         ButterKnife.bind(this);
-        tvParcelable = (TextView) findViewById(R.id.tv_parcelable);
         initTextView();
     }
 

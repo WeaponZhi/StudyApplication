@@ -21,8 +21,12 @@
         <activity android:name=".ProgressBarTestActivity"/>
         <activity android:name=".ViewPagerActivity"/>
         <activity android:name=".ParcelableTestActivity"/>
-
         <service android:name=".service.TestService"/>
+        <receiver android:name=".broadcast.TestBroadcast">
+            <intent-filter android:priority="100">
+                <action android:name="com.imooc.studyapplication.broadcast.TestBroadcast"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
