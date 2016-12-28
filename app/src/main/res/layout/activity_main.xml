@@ -104,4 +104,17 @@
             android:layout_weight="1"
             android:text="发送一条有序广播"/>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_bezier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="贝赛尔曲线"/>
+
+    <Button
+        android:id="@+id/btn_canvas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="简单的具有交互的Canvas View"
+        android:textAllCaps="false"/>
 </LinearLayout>

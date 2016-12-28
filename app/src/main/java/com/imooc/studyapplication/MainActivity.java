@@ -74,6 +74,10 @@ public class MainActivity extends AppCompatActivity {
     Button btn11;
     @Bind(R.id.btn_ordered_bc)
     Button btn12;
+    @Bind(R.id.btn_bezier)
+    Button btn13;
+    @Bind(R.id.btn_canvas)
+    Button btn14;
     private TestService.MyBinder mMyBinder;
     //关联activity和service
     private ServiceConnection mConnection = new ServiceConnection() {
@@ -96,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4, R.id.btn5, R.id.start_service, R.id.stop_service, R.id.bind_service, R.id.unbind_service, R.id.btn_parcelable,R.id.btn_normal_bc,R.id.btn_ordered_bc})
+    @OnClick({R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4, R.id.btn5, R.id.start_service, R.id.stop_service, R.id.bind_service, R.id.unbind_service, R.id.btn_parcelable, R.id.btn_normal_bc, R.id.btn_ordered_bc, R.id.btn_bezier, R.id.btn_canvas})
     public void onClick(View view) {
         Intent intent = new Intent();
         switch (view.getId()) {
@@ -165,6 +169,14 @@ public class MainActivity extends AppCompatActivity {
                 orderedBroadcast.setAction("com.imooc.studyapplication.broadcast.TestBroadcast");
                 orderedBroadcast.putExtra("msg","这是一条有序广播哦~");
                 sendOrderedBroadcast(orderedBroadcast,null);
+                break;
+            case R.id.btn_bezier:
+                Intent intentBezier = new Intent(this, BezierActivity.class);
+                startActivity(intentBezier);
+                break;
+            case R.id.btn_canvas:
+                Intent intentCanvas = new Intent(this, CanvasDemoActivity.class);
+                startActivity(intentCanvas);
                 break;
         }
     }

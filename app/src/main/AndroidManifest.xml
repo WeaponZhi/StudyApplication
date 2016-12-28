@@ -21,6 +21,8 @@
         <activity android:name=".ProgressBarTestActivity"/>
         <activity android:name=".ViewPagerActivity"/>
         <activity android:name=".ParcelableTestActivity"/>
+        <activity android:name=".BezierActivity"/>
+        <activity android:name=".CanvasDemoActivity"/>
         <service android:name=".service.TestService"/>
         <receiver android:name=".broadcast.TestBroadcast">
             <intent-filter android:priority="100">
