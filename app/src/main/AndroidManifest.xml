@@ -23,6 +23,8 @@
         <activity android:name=".ParcelableTestActivity"/>
         <activity android:name=".BezierActivity" />
         <activity android:name=".CanvasDemoActivity"/>
+        <activity android:name=".FlowLayoutActivty"/>
+        <activity android:name=".ViewGroupTestActivity"/>
         <service android:name=".service.TestService"/>
         <receiver android:name=".broadcast.TestBroadcast">
             <intent-filter android:priority="100">

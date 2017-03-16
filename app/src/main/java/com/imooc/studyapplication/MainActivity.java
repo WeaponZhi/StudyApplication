@@ -92,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
     };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -139,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent bindIntent = new Intent(this, TestService.class);
                 //BIND_AUTO_CREATE代表在activity和service建立关系的时候自动调用Service的onCreate方法
                 //注意：这个时候onStartCommand()方法是不会执行的
-                bindService(bindIntent,mConnection,BIND_AUTO_CREATE);
+                bindService(bindIntent, mConnection, BIND_AUTO_CREATE);
                 break;
             case R.id.unbind_service:
                 //解绑服务
@@ -154,21 +155,21 @@ public class MainActivity extends AppCompatActivity {
                 parcelableTestBean.setTestId("This is TestId");
                 parcelableTestBean.setTestName("This is TestName");
                 parcelableTestBean.setTestOrderNum("This is TestOrderNum");
-                bundle.putParcelable("parcelable",parcelableTestBean);
+                bundle.putParcelable("parcelable", parcelableTestBean);
                 intentParcelable.putExtras(bundle);
                 startActivity(intentParcelable);
                 break;
             case R.id.btn_normal_bc:
                 Intent normalBroadcast = new Intent();
                 normalBroadcast.setAction("com.imooc.studyapplication.broadcast.TestBroadcast");
-                normalBroadcast.putExtra("msg","这是一条普通广播哦~");
+                normalBroadcast.putExtra("msg", "这是一条普通广播哦~");
                 sendBroadcast(normalBroadcast);
                 break;
             case R.id.btn_ordered_bc:
                 Intent orderedBroadcast = new Intent();
                 orderedBroadcast.setAction("com.imooc.studyapplication.broadcast.TestBroadcast");
-                orderedBroadcast.putExtra("msg","这是一条有序广播哦~");
-                sendOrderedBroadcast(orderedBroadcast,null);
+                orderedBroadcast.putExtra("msg", "这是一条有序广播哦~");
+                sendOrderedBroadcast(orderedBroadcast, null);
                 break;
             case R.id.btn_bezier:
                 Intent intentBezier = new Intent(this, BezierActivity.class);
@@ -181,7 +182,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void ViewTest(View view){
-        startActivity(new Intent(this,ViewGroupTestActivity.class));
+    public void ViewTest(View view) {
+        startActivity(new Intent(this, ViewGroupTestActivity.class));
+    }
+
+    public void FlowLayout(View view) {
+        startActivity(new Intent(this, FlowLayoutActivty.class));
     }
 }
