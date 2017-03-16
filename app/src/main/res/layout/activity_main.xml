@@ -1,120 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.imooc.studyapplication.MainActivity">
 
-    <Button
-        android:id="@+id/btn1"
-        android:layout_width="match_parent"
-        android:textAllCaps="false"
-        android:layout_height="wrap_content"
-        android:text="带有4个图标的自定义TextView"/>
-
-    <Button
-        android:id="@+id/btn2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="简易添加RecyclerView分割线"/>
-    <Button
-        android:layout_width="match_parent"
-        android:textAllCaps="false"
-        android:layout_height="wrap_content"
-        android:text="TabLayout"
-        android:id="@+id/btn3"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ProgressBarTest"
-        android:textAllCaps="false"
-        android:id="@+id/btn4"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn5"
-        android:text="ViewPager的各种集成控件"
-        android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/start_service"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="start service"
-        android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/stop_service"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="stop service"
-        android:textAllCaps="false"/>
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <Button
-            android:id="@+id/bind_service"
-            android:layout_width="0dp"
+            android:id="@+id/btn1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="bind Service"
-            android:textAllCaps="false"/>
+            android:text="带有4个图标的自定义TextView"
+            android:textAllCaps="false" />
 
         <Button
-            android:id="@+id/unbind_service"
-            android:layout_width="0dp"
+            android:id="@+id/btn2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="unbind Service"
-            android:textAllCaps="false"/>
+            android:text="简易添加RecyclerView分割线"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TabLayout"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ProgressBarTest"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ViewPager的各种集成控件"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/start_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="start service"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/stop_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="stop service"
+            android:textAllCaps="false" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/bind_service"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="bind Service"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/unbind_service"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="unbind Service"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_parcelable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Parcelable测试"
+            android:textAllCaps="false" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_normal_bc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="发送一条普通广播" />
+
+            <Button
+                android:id="@+id/btn_ordered_bc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="发送一条有序广播" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_bezier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="贝赛尔曲线" />
+
+        <Button
+            android:id="@+id/btn_canvas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="简单的具有交互的Canvas View"
+            android:textAllCaps="false" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ViewTest"
+            android:text="自定义View"
+            android:textAllCaps="false"
+            android:onClick="ViewTest"/>
     </LinearLayout>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Parcelable测试"
-        android:textAllCaps="false"
-        android:id="@+id/btn_parcelable"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2">
-
-        <Button
-            android:id="@+id/btn_normal_bc"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="发送一条普通广播"/>
-
-        <Button
-            android:id="@+id/btn_ordered_bc"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="发送一条有序广播"/>
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/btn_bezier"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="贝赛尔曲线"/>
-
-    <Button
-        android:id="@+id/btn_canvas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="简单的具有交互的Canvas View"
-        android:textAllCaps="false"/>
-</LinearLayout>
+</ScrollView>

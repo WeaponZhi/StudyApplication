@@ -180,4 +180,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
+
+    public void ViewTest(View view){
+        startActivity(new Intent(this,ViewGroupTestActivity.class));
+    }
 }
