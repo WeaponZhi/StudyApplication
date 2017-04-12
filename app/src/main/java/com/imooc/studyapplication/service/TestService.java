@@ -87,6 +87,17 @@ public class TestService extends Service {
                 .build();
         startForeground(1,notification);//让Service在前台运行
         LogUtils.logd("onCreate executed");
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(5000);
+                    stopSelf();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 
     @Override
