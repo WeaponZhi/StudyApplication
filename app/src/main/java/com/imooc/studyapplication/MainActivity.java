@@ -189,4 +189,6 @@ public class MainActivity extends AppCompatActivity {
     public void FlowLayout(View view) {
         startActivity(new Intent(this, FlowLayoutActivty.class));
     }
+
+    public void KotlinTest(View view){startActivity(new Intent(this,KotlinTestActivity.class));}
 }

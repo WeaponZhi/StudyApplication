@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.imooc.studyapplication.MainActivity">
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.imooc.studyapplication.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,49 +16,49 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="带有4个图标的自定义TextView"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/btn2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="简易添加RecyclerView分割线"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/btn3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TabLayout"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/btn4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="ProgressBarTest"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/btn5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="ViewPager的各种集成控件"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/start_service"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="start service"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/stop_service"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="stop service"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="bind Service"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"/>
 
             <Button
                 android:id="@+id/unbind_service"
@@ -80,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="unbind Service"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"/>
         </LinearLayout>
 
         <Button
@@ -88,7 +88,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Parcelable测试"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -101,41 +101,52 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="发送一条普通广播" />
+                android:text="发送一条普通广播"/>
 
             <Button
                 android:id="@+id/btn_ordered_bc"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="发送一条有序广播" />
+                android:text="发送一条有序广播"/>
         </LinearLayout>
 
         <Button
             android:id="@+id/btn_bezier"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="贝赛尔曲线" />
+            android:text="贝赛尔曲线"/>
 
         <Button
             android:id="@+id/btn_canvas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="简单的具有交互的Canvas View"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"/>
+
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/ViewTest"
-            android:text="自定义View"
-            android:textAllCaps="false"
-            android:onClick="ViewTest"/>
-        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="ViewTest"
+            android:text="自定义View"
+            android:textAllCaps="false"/>
+
+        <Button
             android:id="@+id/FlowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="FlowLayout"
             android:text="流式布局"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/kotlin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="KotlinTest"
+            android:text="Kotlin 测试"
             android:textAllCaps="false"
-            android:onClick="FlowLayout"/>
+            />
     </LinearLayout>
 </ScrollView>
