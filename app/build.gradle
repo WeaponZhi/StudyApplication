@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.antfortune.freeline'
 android {
     compileSdkVersion 24
@@ -40,4 +42,8 @@ dependencies {
     compile 'com.android.support:cardview-v7:24.2.0'
     compile files('libs/butterknife-7.0.1.jar')
     compile files('libs/logger-1.13.jar')
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }
