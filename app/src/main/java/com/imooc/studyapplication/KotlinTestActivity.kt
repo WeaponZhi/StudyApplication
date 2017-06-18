@@ -10,11 +10,11 @@ class KotlinTestActivity : AppCompatActivity() {
    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kotlin_test)
-        btn_kotlin_1.setText("小之1");
-        btn_kotlin_2.setText("小之2");
-        btn_kotlin_3.setText("小之3");
+        btn_kotlin_1.text = "小之1"
+        btn_kotlin_2.text = "小之2"
+        btn_kotlin_3.text = "小之3"
 
-    }
+   }
 
 
 }

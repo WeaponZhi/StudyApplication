@@ -1,17 +1,16 @@
 package com.imooc.studyapplication.service;
 
-import android.app.Notification;
-import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.os.Binder;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 
-import com.imooc.studyapplication.MainActivity;
-import com.imooc.studyapplication.R;
 import com.imooc.studyapplication.Util.LogUtils;
+
+import java.util.concurrent.Future;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  * TestService 测试服务类
@@ -40,7 +39,9 @@ import com.imooc.studyapplication.Util.LogUtils;
 
 public class TestService extends Service {
     public static final String TAG = "MyService";
-
+    private ScheduledThreadPoolExecutor executor;
+    private Future future;
+    private Runnable runnable;
     private MyBinder mBinder = new MyBinder();
 
     @Nullable
@@ -55,7 +56,6 @@ public class TestService extends Service {
      * 取到相同的MyBinder实例。
      */
    public class MyBinder extends Binder {
-
         public void startDownload() {
             //这是标准的写法
             new Thread(new Runnable() {
@@ -75,42 +75,25 @@ public class TestService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        Intent notificationIntent = new Intent(this, MainActivity.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this,0,notificationIntent,0);
-        Notification notification = new Notification.Builder(this)
-                .setSubText("这是子标题")
-                .setContentTitle("这是通知标题")
-                .setContentText("这是通知内容")
-                .setSmallIcon(R.mipmap.ic_launcher)
-                .setLargeIcon(BitmapFactory.decodeResource(this.getResources(),R.mipmap.ic_launcher))
-                .setContentIntent(pendingIntent)
-                .build();
-        startForeground(1,notification);//让Service在前台运行
         LogUtils.logd("onCreate executed");
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(5000);
-                    stopSelf();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
+        executor = new ScheduledThreadPoolExecutor(1);
+        LogUtils.logd("executor is "+executor.hashCode());
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         LogUtils.logd("onStartCommand() executed");
         //这是标准写法
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                //开始执行后台任务
-            }
-        }).start();
-        return super.onStartCommand(intent, flags, startId);
+        if (future == null || future.isCancelled()) {
+            runnable = new Runnable() {
+                @Override
+                public void run() {
+                    LogUtils.logd("Timer is running");
+                }
+            };
+            future = executor.scheduleAtFixedRate(runnable,0, 1,TimeUnit.SECONDS);
+        }
+        return super.onStartCommand(intent,flags,startId);
 
     }
 
